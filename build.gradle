@@ -1,15 +1,11 @@
 allprojects {
 	apply plugin:'java'
 	apply plugin:'idea'
-	idea{
-	
-		project { 
+	idea {
+
+		project {
 			jdkName = '1.6'
 		}
-		
-		workspace.iws {
-			withXml { provider ->
-			}
-		}
+
 	}
 }

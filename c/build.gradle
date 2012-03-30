@@ -1,0 +1,15 @@
+
+repositories{
+    mavenRepo urls: ['http://lonrs03045.fm.rbsgrp.net:8081/artifactory/ODCRepository/']
+}
+
+dependencies {
+    compile project(':b')
+
+    testCompile project(path: ':b', configuration: 'testFixtures')
+
+    testCompile 'junit:junit:4.10'
+}
+
+
+

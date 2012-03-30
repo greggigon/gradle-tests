@@ -1,0 +1,28 @@
+configurations {
+    testFixtures {
+        extendsFrom testRuntime
+    }
+}
+
+
+task testJar(type: Jar) {
+    from sourceSets.test.output
+    classifier = 'test'
+}
+
+artifacts {
+    testFixtures testJar
+}
+
+
+repositories{
+    mavenRepo urls: ['http://lonrs03045.fm.rbsgrp.net:8081/artifactory/ODCRepository/']
+}
+
+dependencies {
+    compile project(':a')
+
+    testCompile project(path: ':a', configuration: 'testFixtures')
+
+    testCompile 'junit:junit:4.10'
+}
