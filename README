@@ -1,4 +1,5 @@
 Running gradle idea will break.
+Added this line
 
 It also does this: Dynamic properties have been deprecated (property "jdkName" on the object "org.gradle.plugins.ide.idea.model.IdeaModel_Decorated@12c55e4" with value "1.6" created).
 I would think it shouldn't.
